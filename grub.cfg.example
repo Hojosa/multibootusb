@@ -81,6 +81,16 @@ submenu "GRUB2 options ->" {
   }
 }
 
+menuentry 'Boot from local hard drive' {
+set root='(hd1)'
+chainloader +1
+boot
+}
+
+menuentry 'System setup' {
+fwsetup
+}
+
 # Reboot
 menuentry "Reboot" {
   reboot
